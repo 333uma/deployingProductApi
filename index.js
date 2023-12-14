@@ -13,11 +13,10 @@ app.get("/products",(request,response) => {
     response.send(products);
 })
 
-app.get("/products/:id",(request,response) => {
-    const {id} = request.params;
-    response.send(products[id]);
+app.get("/products/getRandomProduct",(request,response) => {
+    const i = Math.floor(Math.random()*products.length);
+    response.send(products[i]);
 })
-
 app.listen(port, () => {
     console.log(`Server Running on: ${port}`);
 })
