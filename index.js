@@ -13,7 +13,7 @@ app.get("/products",(request,response) => {
     response.send(products);
 })
 
-app.get("/products/getRandomProduct",(request,response) => {
+app.get("/getRandomProduct",(request,response) => {
     const i = Math.floor(Math.random()*products.length);
     response.send(products[i]);
 })
