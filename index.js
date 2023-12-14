@@ -14,7 +14,7 @@ app.get("/products",(request,response) => {
 })
 
 app.get("/products/:id",(request,response) => {
-    const {i} = request.params;
+    const {id} = request.params;
     response.send(products[i]);
 })
 
