@@ -15,7 +15,7 @@ app.get("/products",(request,response) => {
 
 app.get("/products/:id",(request,response) => {
     const {id} = request.params;
-    response.send(products[i]);
+    response.send(products[id]);
 })
 
 app.listen(port, () => {
