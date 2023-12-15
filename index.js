@@ -18,9 +18,10 @@ app.get("/getRandomProduct",(request,response) => {
     response.send(products[i]);
 })
 
-app.get("/products/:id/",(request,response) => {
+
+app.get("/products/:id", (request, response) => {
     let {id} = request.params;
-    const x = id + 1;
+    const x = parseInt(id) - 1;
     response.send(products[x]);
 })
 
