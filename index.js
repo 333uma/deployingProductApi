@@ -18,6 +18,11 @@ app.get("/getRandomProduct",(request,response) => {
     response.send(products[i]);
 })
 
+app.get("/products/:id",(request,response) => {
+    const {id} = request.params;
+    response.send(products[id + 1]);
+})
+
 app.listen(port, () => {
     console.log(`Server Running on: ${port}`);
 })
