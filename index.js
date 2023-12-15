@@ -19,8 +19,9 @@ app.get("/getRandomProduct",(request,response) => {
 })
 
 app.get("/products/:id",(request,response) => {
-    const {id} = request.params;
-    response.send(products[id+1]);
+    let {id} = request.params;
+    const x = id + 1;
+    response.send(products[x]);
 })
 app.listen(port, () => {
     console.log(`Server Running on: ${port}`);
