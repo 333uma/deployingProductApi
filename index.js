@@ -25,6 +25,11 @@ app.get("/products/:id", (request, response) => {
     response.send(products[x]);
 })
 
+app.get("/products/:id",(request,response) => {
+    let {id} = request.params;
+    const x = id + 1;
+    response.send(products[x]);
+})
 app.listen(port, () => {
     console.log(`Server Running on: ${port}`);
 })
